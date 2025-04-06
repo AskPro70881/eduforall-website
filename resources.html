@@ -1,13 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Free Learning Resources | EduForAll</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f8ff;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
 
-    <html><head><title>Resources</title><link rel="stylesheet" href="style.css"></head><body>
+    header {
+      background: linear-gradient(to right, #004d99, #66ccff);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      animation: slideDown 1s ease;
+    }
+
+    h1 {
+      margin-bottom: 0;
+    }
+
+    .resource-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .resource {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease;
+      animation: fadeIn 1.2s ease-in;
+    }
+
+    .resource:hover {
+      transform: scale(1.05);
+    }
+
+    .resource img {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 15px;
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin: 30px;
+      font-size: 18px;
+      color: #004d99;
+      text-decoration: none;
+      animation: fadeIn 2s ease;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-100px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header>
     <h1>Free Learning Resources</h1>
-    <ul>
-        <li><a href="https://www.khanacademy.org/">Khan Academy</a></li>
-        <li><a href="https://nptel.ac.in/">NPTEL Courses</a></li>
-        <li><a href="https://www.coursera.org/">Coursera (Free)</a></li>
-        <li><a href="https://ndl.iitkgp.ac.in/">National Digital Library</a></li>
-        <li><a href="https://swayam.gov.in/">Swayam MOOC</a></li>
-    </ul>
-    <a href="index.html">Back to Home</a>
-    </body></html>
-    
+    <p>Learn anytime, anywhere — for free!</p>
+  </header>
+
+  <section class="resource-container">
+    <div class="resource">
+      <img src="images/khan.png" alt="Khan Academy">
+      <h3><a href="https://www.khanacademy.org/" target="_blank">Khan Academy</a></h3>
+      <p>World-class education for free. Courses from math to arts.</p>
+    </div>
+
+    <div class="resource">
+      <img src="images/nptel.png" alt="NPTEL">
+      <h3><a href="https://nptel.ac.in/" target="_blank">NPTEL Courses</a></h3>
+      <p>Quality lectures from India’s top IIT professors.</p>
+    </div>
+
+    <div class="resource">
+      <img src="images/coursera.png" alt="Coursera">
+      <h3><a href="https://www.coursera.org/" target="_blank">Coursera (Free)</a></h3>
+      <p>Enroll in university-level courses and earn certifications.</p>
+    </div>
+
+    <div class="resource">
+      <img src="images/ndl.png" alt="NDL">
+      <h3><a href="https://ndl.iitkgp.ac.in/" target="_blank">National Digital Library</a></h3>
+      <p>Access millions of books and papers for academic needs.</p>
+    </div>
+
+    <div class="resource">
+      <img src="images/swayam.png" alt="Swayam">
+      <h3><a href="https://swayam.gov.in/" target="_blank">Swayam MOOC</a></h3>
+      <p>Free courses from school to post-graduate level.</p>
+    </div>
+  </section>
+
+  <a class="back-link" href="index.html">⬅ Back to Home</a>
+</body>
+</html>
